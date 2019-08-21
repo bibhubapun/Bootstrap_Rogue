@@ -26,27 +26,99 @@
 	<div id="main" class="container">
 		<div class="navbar navbar-fixed-top">
 			<div class="container">
-				<a class="navbar-brand" href="/"><img src="images/logo.png" alt="Your Logo"></a>
+				<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+					
+				</button>
+				<a class="navbar-brand" href="/"><img src="images/logo.jpeg" alt="Your Logo" width="50" height="30"></a>
 				<div class="nav-collapse collapse navbar-responsive-collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="#">Home</a></li>
-						<li><a href="#">Services</a></li>						
+						<li class="dropdown"><a href="#" class="dropdow-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Solar System</a></li>
+								<li><a href="#">Planets</a></li>
+								<li><a href="#">Moons</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">Cosmic Bodies</li>
+								<li><a href="#">Nebulae</a></li>
+								<li><a href="#">Galaxies</a></li>
+							</ul>
+
+						</li>						
 					</ul>
 					<form class="navbar-form pull-left">
 						<input type="text" class="form-control" placeholder="Search this site.." id="searchInput">
 						<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>			
 					</form>
 					<ul class="nav navbar-nav pull-right">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span>My Account</a></li>
+						<li class="dropdown"><a href="#" class="dropdow-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><span class="glyphicon glyphicon-cog"></span>Settings</a></li>
+								<li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Profile</a></li>
+								<li class="divider"></li>
+								<li><a href="#"><span class="glyphicon glyphicon-off"></span>Sign out</a></li>
+							</ul>
+
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>		
 	
-	  <div class="caraousel slide" id="myCarousel">		
+	  <div class="carousel slide" id="myCarousel">
+	  	<ol class="carousel-indicators">
+	  		<li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+	  		<li data-slide-to="1" data-target="#myCarousel"></li>
+	  		<li data-slide-to="2" data-target="#myCarousel"></li>	  		
+	  	</ol>
+	  	<div class="carousel-inner">
+	  		<div class="item active" id="slide1">
+	  			<img src="images/saturn_large.jpg" class="d-block w-100" alt="s1">
+	  			<div class="carousel-caption">
+	  				<h4>Saturn</h4>
+	  				<p>Saturn is a gas giant and has beautiful rings of a width of just a few meters around it. It is a very recognisable planet.</p>	  				
+	  			</div>	  			
+	  		</div>
+	  		<div class="item" id="slide2">
+	  			<img src="images/sun.jpg" class="d-block w-100" alt="s2">
+	  			<div class="carousel-caption">
+	  				<h4>Sun</h4>
+	  				<p>Sun is our very own star in the solar system. It provides us with all the energy we need to function as human beings.</p>	  				
+	  			</div>	  			
+	  		</div>
+	  		<div class="item" id="slide3">
+	  			<img src="images/earth.jpg" class="d-block w-100" alt="s3">
+	  			<div class="carousel-caption">
+	  				<h4>Earth</h4>
+	  				<p>Earth is our very own planet where we live. Its the only planet in the solar system known to have life as we know it.</p>	  				
+	  			</div>	  			
+	  		</div>	  	
 	  </div>
-	  <div class="row" id="bigCallout">	
-	  </div>
+
+	  <a href="#myCarousel" class="left carousel-control" data-slide="prev"><span class="icon-prev"></span></a>
+	  <a href="#myCarousel" class="right carousel-control" data-slide="next"><span class="icon-next"></span></a>
+	</div>
+
+
+	<div class="row" id="bigCallout">	
+	  	<div class="col-12">
+	  		<div class="alert alert-success alert-block fade in" id="successAlert">
+	  			<button class="close" type="button" data-dismiss="alert">&times;</button>
+	  			<h4>Congratulations on your new purchase!</h4>
+	  		</div>
+	  		<div class="well well-small visible-sm">
+	  			<a href="" class="btn btn-large btn-block btn-default"><span class="glyphicon glyphicon-earphone"></span>Call us Now!</a>
+	  		</div>
+	  		<div class="well">
+	  		<div class="page-header">
+	  			<h1>Buy your own telescope today!<small> Go to your nearest store.</small></h1>
+	  		</div> 
+	  		<p class="lead"> Explore the exciting world of the night sky and the universe you live in!</p>
+	  		<a href="#" class="btn btn-large btn-primary">Buy Now!</a>
+	  		<a href="#" class="btn btn-large btn-link">More info..</a>
+	  		</div>	  		
+	  	</div>
+    </div>
 	  <div class="row" id="featuresHeading">
 	  </div>
 	  <div class="row" id="features">
